@@ -1,12 +1,26 @@
-var index = 0;
+// var index = 0;
+
+// function changeColors(){
+//     var colors = ["red","blue","orange","purple","green","grey","yellow","black","pink"];
+
+//     document.getElementsByTagName("body")[0].
+//     style.background = colors[index++];
+
+//     if(index > colors.length - 1)
+//      index = 0;
+
+//  }
 
 function changeColors(){
-    var colors = ["red","blue","orange","purple","green","grey","yellow","black","pink"];
+    var hex_numbers = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"];
 
-    document.getElementsByTagName("body")[0].
-    style.background = colors[index++];
+    var hexcode = '';
 
-    if(index > colors.length - 1)
-     index = 0;
-
- }
+    for(var i=0;i<6;i++){ 
+    var random_index = Math.floor(Math.random()*hex_numbers.length);
+    
+    hexcode += hex_numbers[random_index]
+      }
+      document.getElementById("hex-code").innerHTML=hexcode;
+      document.getElementsByTagName("body")[0].style.background="#" + hexcode;
+}

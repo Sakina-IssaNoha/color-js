@@ -1,6 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Comfortaa:wght@300&family=Heebo:wght@300;400&family=Inter:wght@100&family=Libre+Bodoni&family=Montserrat:wght@600&family=Mulish:wght@200&family=PT+Sans&family=Pacifico&family=Plus+Jakarta+Sans:wght@300&family=Poppins:wght@200&family=Radio+Canada:wght@300&family=Rubik:wght@300&family=Ubuntu:wght@300&display=swap');
+
+body{
+    font-family: 'Comfortaa', cursive;
+
+}
+
 .container{
+    /* border: solid 1px black; */
+    width: 95%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+.hex-color{
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.hex-color h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    animation: colorchange 5s infinite alternate;
+
+}
+
+.hex-color h2{
+    font-size: 2rem;
+    /* border: 1px solid black; */
+    margin-top: 15%;
+}
+
+@keyframes colorchange{
+    0%{
+        color: indigo;
+    }
+    20%{
+        color: blue;
+    }
+    40%{
+        color: green;
+    }
+    60%{
+        color: yellow;
+    }
+    80%{
+        color: red;
+    }
+    100%{
+        color: orange;
+    }
+}
+
+@media(max-width:480px) {
+    .hex-color h1{
+        font-size: 1.5rem;
+    }
+
+    .hex-color h2{
+        font-size: 1.5rem;
+    }
 }
